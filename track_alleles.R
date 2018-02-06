@@ -1,3 +1,5 @@
+#Just copy this script to R, modify N, num.gens and n.iter
+
 N<-10
 offset<-0.2
 ###Track pairs
@@ -14,8 +16,11 @@ num.tracked<-2
 # col.allele<-  c("red","blue","purple") #c("red","blue")   #
 # num.tracked<-3
 
+#number of generations
 num.gens<-20
-n.iter<-20
+
+#number of iterations
+n.iter<-1
 for(iter in 1:n.iter){
 plot(c(1,num.gens),c(1,N),type="n",axes=FALSE,xlab="",ylab="")
 mtext(side=1,line=1,"Generations")
@@ -57,8 +62,9 @@ for(ind in 1:N){
 	 track.this.allele<-track.this.allele.next.gen
 	 track.this.allele.next.gen<-vector("list", 2*N)
 	}
+	}
 
-#uncomment if you make a pdf	}
+#uncomment if you make a pdf	
 #dev.off()	
 
 # ###coal vs geo
